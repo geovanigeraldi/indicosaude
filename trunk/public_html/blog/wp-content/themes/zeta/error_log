@@ -1,0 +1,6 @@
+[25-Jun-2010 14:32:53] PHP Fatal error:  Call to undefined function  get_header() in /home/chiqmont/public_html/wpcorner.com/demo/wp-content/themes/zeta/index.php on line 1
+[28-Jun-2010 08:28:05] PHP Fatal error:  Call to undefined function  get_header() in /home/chiqmont/public_html/wpcorner.com/demo/wp-content/themes/zeta/index.php on line 1
+[30-Jun-2010 09:42:19] PHP Fatal error:  Call to undefined function  get_header() in /home/chiqmont/public_html/wpcorner.com/demo/wp-content/themes/zeta/index.php on line 1
+[01-Jul-2010 20:24:52] PHP Fatal error:  Call to undefined function  get_header() in /home/chiqmont/public_html/wpcorner.com/demo/wp-content/themes/zeta/index.php on line 1
+[03-Jul-2010 05:26:27] PHP Fatal error:  Call to undefined function  get_header() in /home/chiqmont/public_html/wpcorner.com/demo/wp-content/themes/zeta/index.php on line 1
+[29-Jul-2010 12:11:08] PHP Fatal error:  Call to undefined function  get_header() in /home/chiqmont/public_html/wpcorner.com/demo/wp-content/themes/zeta/index.php on line 1
