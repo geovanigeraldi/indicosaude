@@ -1,0 +1,279 @@
+/*
+Theme Name: ZEXEE
+URI: http://thedesignsuperhero.com/
+Description:  
+Version: 1.6
+Author: Aravind Ajith
+Author URI: http://thedesignsuperhero.com/
+Tags:
+
+
+*/
+
+
+
+/* Begin Typography & Colors */
+body { font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif; background: #d5d6d7 url('images/main_bg.png'); color: #333; margin:0px 0px 0px 0px; font-size:12px; }
+.body-wrapper { background:url(images/top.png) repeat-x 0 0; padding-top:22px; }
+a img { border:none; }
+#content { font-size: 1.2em }
+.widecolumn .entry p { font-size: 1.05em; }
+.narrowcolumn .entry a.more-link { display:block; float:right; margin-top:15px; }
+::-moz-selection { background:#3f3637; color:#fff;}
+::selection { background:#3f3637; color:#fff;}
+a { outline:none; }
+.narrowcolumn .entry, .widecolumn .entry { line-height: 1.4em; font-size:12px; font-family:Georgia, "Times New Roman", Times, serif; }
+.widecolumn { line-height: 1.6em; }
+.narrowcolumn .postmetadata { text-align: center; }
+.thread-alt { background-color: #f8f8f8; }
+.thread-even { background-color: white; }
+.depth-1 { border: 1px solid #ddd; }
+.even, .alt { border-left: 1px solid #ddd; }
+#footer { background: url(images/footer.png) repeat-x 0 0; border: none; overflow:hidden; }
+.foot-in { width:965px; margin:0 auto; padding:30px 0 20px; color:#ccc; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; overflow:hidden; font-size:14px; text-align:center; }
+small { font-family:Georgia, "Times New Roman", Times, serif; font-size: 0.9em; line-height: 1.5em; }
+h1, h2, h3 { font-family: Georgia, 'Lucida Grande', Verdana, Arial, Sans-Serif; font-weight: bold; font-style:italic; }
+h1 { font-size: 4em; text-align: center; }
+h2 { font-size: 1.6em; }
+h2.pagetitle { font-size: 20px; color:#000; text-shadow:1px 1px 0px #c35a63; margin:20px 0px 20px 5px; }
+#sidebar h2 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 1.2em; }
+h3 { font-size: 1.3em; }
+h1, h1 a, h1 a:hover, h1 a:visited, #headerimg .description { text-decoration: none; color: white; }
+h2, h2 a, h2 a:visited, h3, h3 a, h3 a:visited { color: #333; }
+.post-body h2 a { color: #333 !important; }
+h2, h2 a, h2 a:hover, h2 a:visited, h3, h3 a, h3 a:hover, h3 a:visited, #sidebar h2, #wp-calendar caption, cite { text-decoration: none; }
+.entry p a:visited { color: #b85b5a; }
+.commentlist li, #commentform input, #commentform textarea { font: 0.9em georgia; }
+.commentlist li ul li { font-size: 12px; }
+.commentlist li .avatar { background:#FFFFFF none repeat scroll 0 0; border:1px solid #EEEEEE; float:left; margin-right:13px; }
+.commentlist cite, .commentlist cite a { font-weight: bold; font-style: normal; font-size: 1.1em; }
+.commentlist p { font-weight: normal; line-height: 1.5em; text-transform: none; }
+#commentform p { font-family:Georgia, "Times New Roman", Times, serif; }
+.commentmetadata { font-weight: normal; }
+#sidebar { font: 1em Georgia, "Times New Roman", Times, serif; }
+small, #sidebar ul ul li, #sidebar ul ol li, .nocomments, .postmetadata, blockquote, strike { color: #666; font-size:11px; }
+code { font: 1.1em 'Courier New', Courier, Fixed; }
+acronym, abbr, span.caps { font-size: 0.9em; letter-spacing: .07em; }
+a, h2 a:hover, h3 a:hover { color: #9B1C26; text-decoration: none; }
+.widget a:hover { opacity:0.8; }
+#wp-calendar #prev a, #wp-calendar #next a { font-size: 9pt; }
+#wp-calendar a { text-decoration: none; }
+#wp-calendar caption { font: bold 1.3em Georgia, "Times New Roman", Times, serif; text-align: center; }
+#wp-calendar th { font-style: normal; text-transform: capitalize; }
+/* End Typography & Colors */
+
+
+
+/* Begin Structure */
+body { margin: 0; padding: 0; }
+#page { margin: 0px auto; padding-top: 12px; width: 1000px; position:relative; overflow:visible; min-height:600px }
+.follow-links { height:50px; left:0; position:absolute; top:-28px; background:url(images/top_icons.png) no-repeat 0 0; }
+.follow-links a { display:block; float:left; width:30px; height:30px; text-indent:-9999px; margin-right:2px; }
+.narrowcolumn { float: right; padding: 0; margin: 0px 0 0; width: 684px; }
+.post-wr { background:url(images/post_top.png) no-repeat 0 0; padding-top:8px; margin: 0 0 20px; text-align: justify; position:relative; }
+.post-wr a { color:#9b1c26; }
+.post-wr a:hover { background:url(images/ul.gif) repeat-x bottom; text-decoration:none; }
+.post-wr a img { border:1px solid #ddd; }
+.post-wr .post-foot { background:url(images/post_foot.png) no-repeat bottom; padding-bottom:89px; }
+.post-wr .post-body { background:url(images/post_repeat.png) repeat-y 0 0; padding:20px 67px 20px 112px; }
+.single-page .post-body{ padding:20px 67px 20px 62px}
+.date-comments { background:url(images/date-stamp.png) no-repeat 0 0; height:93px; left:-5px; position:absolute; top:36px; width:144px; font-family:Georgia, "Times New Roman", Times, serif; }
+.digg-tds { left:31px; position:absolute; top:148px; }
+.tweet-tds { left:31px; position:absolute; top:245px }
+.fb-tds{left:31px; position:absolute; top:330px }
+.date-comments .comments { color:#FFFFFF; font-size:18px; font-style:italic; left:9px; position:relative; text-align:right; top:10px; width:35px; }
+.date-comments .comments a { color:#FFF; }
+.date-comments .date-stamp { color:#BAADAE; left:40px; position:relative; top:6px; width:40px; text-align:center; }
+.date-comments .date-stamp .date { font-size:36px; }
+.date-comments .date-stamp .month { font-size:14px; text-transform:uppercase; position:relative; top:-8px; }
+.post hr { display: block; }
+.widecolumn .post { margin: 0; }
+.narrowcolumn .postmetadata { padding-top: 5px; }
+.widecolumn .postmetadata { margin: 30px 0; }
+.widecolumn .smallattachment { text-align: center; float: left; width: 128px; margin: 5px 5px 5px 0px; }
+.widecolumn .attachment { text-align: center; margin: 5px 0px; }
+.postmetadata { clear: both; }
+.clear { clear: both; }
+#footer { padding: 0; margin: 0 auto; clear: both; }
+#footer p { margin: 0; padding: 7px 0; }
+/* End Structure */
+
+
+
+/*	_headers */
+
+#header { float:left; width:300px; padding-top:0px; }
+#header h1 a { text-transform:uppercase; top:10px; width:300px; display:block; font-family:myriad pro, calibri, arial; font-size:80px; font-style:normal; color:#000; text-shadow:1px 1px 2px #B75B62; }
+#header .description { text-align:center; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; text-shadow:1px 1px 0px #333; color:#e6c7c9; }
+#header h1 { margin:20px 0 0px; }
+h2 { margin: 30px 0 0; }
+#sidebar h2 { margin: 8px 0 13px; padding: 0; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; color:#000; }
+#sidebar li li { list-style:none; padding:5px 0 !important; border-bottom: 1px dotted #b92733; }
+#sidebar li ul { margin:0px !important; }
+#sidebar .widget_links, #sidebar .widget_categories { clear:both; overflow:hidden; }
+#sidebar .widget_links li, #sidebar .widget_categories li, .blogroll li, .categories li, .pagenav li{ float:left; margin-right:6px !important; width:116px; }
+#sidebar .wid-b>ul>li{ overflow:hidden; clear:both;}
+h3 { padding: 0; margin: 30px 0 0; }
+h3.comments { padding: 0; margin: 40px auto 20px; }
+/* End Headers */
+
+#main-nav { overflow:hidden; clear:both; padding:8px 0px !important; text-align:center; margin-bottom:23px !important }
+#main-nav li { display:inline; margin-right:5px; }
+#main-nav li a, #main-nav li a:visited { background:#166c73; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding:3px 8px; color:#fff; -moz-box-shadow: 1px 1px 0px #b75b62; -webkit-box-shadow:1px 1px 0px #b75b62; font-family:calibri, arial; text-shadow:1px 1px 0px #444; color:#c5dadc }
+#main-nav li a:hover { color:#fff }
+#main-nav li a:active { position:relative; bottom:-1px; right:-1px; }
+/* Begin Images */
+p img { padding: 0; max-width: 100%; }
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+
+img.centered { display: block; margin-left: auto; margin-right: auto; }
+img.alignright { padding: 4px; margin: 0 0 2px 7px; display: inline; }
+img.alignleft { padding: 4px; margin: 0 7px 2px 0; display: inline; }
+.alignright { float: right; }
+.alignleft { float: left }
+/* End Images */
+
+
+
+/* Begin Lists  */
+.entry ol { padding: 0 0 0 35px; margin: 0; }
+.entry ol li { margin: 0; padding: 0; }
+.postmetadata ul, .postmetadata li { display: inline; list-style-type: none; list-style-image: none; }
+#sidebar ul, #sidebar ul ol { margin: 0; padding: 0; }
+#sidebar ul li { list-style-type: none; list-style-image: none; margin-bottom: 35px; }
+#sidebar ul p, #sidebar ul select { margin: 5px 0 8px; }
+#sidebar ul ul, #sidebar ul ol { margin: 5px 0 0 10px; }
+#sidebar ul ul ul, #sidebar ul ol { margin: 0 0 0 10px; }
+ol li, #sidebar ul ol li { list-style: decimal outside; }
+#sidebar ul ul li, #sidebar ul ol li { margin: 3px 0 0; padding: 0; }
+/* End Entry Lists */
+
+
+/* Begin Form Elements */
+#searchform { margin: 10px auto; padding: 5px 3px; text-align: center; }
+#searchform #s { border:1px solid #aaa; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:13px; padding:5px 5px; width:163px; color:#333; }
+#searchsubmit { background:url(images/search_btn.png) no-repeat; width:61px; height:27px; text-indent:-9999px; border:none; cursor:pointer; }
+#searchform label{ display:none;}
+.entry form { /* This is mainly for password protected posts, makes them look better. */ text-align:left; }
+select { width: 130px; }
+#commentform input { width: 170px; padding: 2px; margin: 5px 5px 1px 0; }
+#commentform { margin: 5px 10px 0 0; }
+#commentform textarea { width: 100%; padding: 2px; }
+#respond:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+#respond h3, h3#pings { color:#000000; margin-bottom:15px !important; }
+h3#comments { color:#000000; margin-bottom:39px !important; padding:0 20px; text-align:center; }
+#respond label { width:70px; display:block; float:left;}
+#commentform { position:relative; height:138px; color:#000; }
+#commentform a { color:#ccc; }
+#commentform input[type="text"] { background:transparent url(images/search.png) no-repeat scroll 0 0; border:medium none; color:#CCCCCC; font-family:Georgia, "Times New Roman", Times, serif; font-size:13px; font-style:italic; padding:5px; width:206px; display:block; }
+#commentform textarea { background:url(images/textarea.png) no-repeat; height:90px; border:none; width:370px; color:#CCCCCC; font-family:Georgia, "Times New Roman", Times, serif; font-size:13px; font-style:italic; padding:5px; position:absolute; right:0px; top:-2px; }
+#commentform #submit { margin: 0 0 5px auto;  position: absolute; background:url(images/submit_comment.png) no-repeat; height:24px; width:171px; text-indent:-999px; border:none; cursor:pointer; right: 0px; bottom:0px; }
+/* End Form Elements */
+
+
+
+/* Begin Comments*/
+.commentlist { padding: 0; text-align: justify; clear:both; }
+.commentlist li{ list-style-type:none; background:none; border:none;}
+.commentlist li .comment-div{ margin: 15px 0 10px; padding:11px 13px 20px; list-style: none; background:#fff; font-family:arial, helvetica; overflow:hidden; -moz-border-radius:3px; position:relative;}
+.comment-author { font-weight:bold;}
+.commentlist .commentmetadata {border-bottom:1px solid #DDDDDD;
+color:#999999;
+font-size:10px;
+padding-bottom:8px; }
+.commentlist li .comment-reply-link{ position:absolute; right:12px; top:19px; font-size:10px; padding:1px 7px; background:#ddd; -moz-border-radius: 2px;}
+.commentlist li ul li { margin-right: -5px; margin-left: 20px;  }
+.children { padding: 0; }
+.nocomments { text-align: center; margin: 0; padding: 0; }
+.commentmetadata { margin: 0; display: block; }
+
+/* End Comments */
+
+
+
+/* Begin Sidebar */
+#sidebar { float:left; padding:15px 0 10px; width:310px; font-family:Georgia, "Times New Roman", Times, serif; }
+#sidebar form { margin: 0; }
+#sidebar a { color:#222; }
+/* End Sidebar */
+
+
+
+/* Begin Calendar */
+#wp-calendar { empty-cells: show; margin: 10px auto 0; width: 155px; }
+#wp-calendar #next a { padding-right: 10px; text-align: right; }
+#wp-calendar #prev a { padding-left: 10px; text-align: left; }
+#wp-calendar a { display: block; }
+#wp-calendar caption { text-align: center; width: 100%; }
+#wp-calendar td { padding: 3px 0; text-align: center; }
+#wp-calendar td.pad:hover { /* Doesn't work in IE */ background-color: #fff; }
+/* End Calendar */
+
+
+
+/* Begin Various Tags & Classes */
+acronym, abbr, span.caps { cursor: help; }
+acronym, abbr { border-bottom: 1px dashed #999; }
+blockquote { margin: 15px 30px 0 10px; padding-left: 20px; border-left: 5px solid #ddd; text-align:left; }
+blockquote cite { margin: 5px 0 0; display: block; }
+.center { text-align: center; }
+.hidden { display: none; }
+hr { display: none; }
+.navigation { display: block; text-align: center; margin-top: 10px; margin-bottom: 10px; }
+/* End Various Tags & Classes*/
+
+
+
+/* Captions */
+.aligncenter, div.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.wp-caption { border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px; -moz-border-radius: 3px; -khtml-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.wp-caption img { margin: 0; padding: 0; border: 0 none; }
+.wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; padding: 0 4px 5px; margin: 0; }
+/* End captions */
+/* _ad */
+
+#wp125adwrap_2c .wp125ad { padding:0 5px 0px 0!important; }
+#wp125adwrap_2c .even, #wp125adwrap_2c .alt { border:none !important; }
+#wp125adwrap_2c { overflow:hidden; clear:both; }
+/* _pagination */
+
+.pagination { padding:4px; text-align:center; }
+.pagination span { display:none; }
+.pagination .on { background:#aaa none repeat scroll 0 0; padding:5px 10px; -moz-border-radius: 3px;
+-webkit-border-radius: 3px; }
+.pagination a { background:#CCCCCC none repeat scroll 0 0; padding:4px 9px; -moz-border-radius: 3px;
+-webkit-border-radius: 3px;}
+.sponsered { font-family:Arial, Helvetica, sans-serif; padding:13px; border:3px solid #eee; background:#ddd url(images/sponsered.jpg) no-repeat right bottom; }
+.commentlist.pingbacks li { background:none !important; border:none !important; color:#fff; padding:0px; list-style-type:decimal-leading-zero; margin-left:35px; overflow:visible !important; }
+.commentlist.pingbacks li a { color:#fff; font-size:12px; font-weight:normal; }
+.commentlist.pingbacks .commentmetadata, .commentlist.pingbacks p, .commentlist.pingbacks span.says { display:none; }
+#text-396407091 { padding-bottom: 0px !important; }
+#bsaz_1235545 { float:left; width:auto !important; padding-right:12px !important; }
+.add-in-the-post { padding:15px 0; text-align:center; }
+#respond { overflow:hidden; padding-bottom:30px; width:685px; }
+.subscribe-to-comments { clear:none !important; display:block; padding-left:70px; }
+.subscribe-to-comments label { width:auto !important; display:inline !important; float:none !important; }
+.contactform { padding-top:30px; }
+.contactform label { width:66px; display:block; float:left; clear:left; }
+.contactform input, .contactform textarea { margin-bottom:10px; }
+
+
+#notfound #page{ margin-top:10%;}
+.entry p a img { border:3px solid #AAAAAA !important; margin:-3px; }
+.entry p a:hover img { border:5px solid #AAAAAA !important; margin:-5px; }
+#sidebar-wr { background:url(images/widget_bg_top.png) no-repeat 0 0; padding-top:18px; }
+#sidebar div.wid-a { background:transparent url(images/widget_bg_bottom.png) no-repeat scroll left bottom; padding-bottom:37px; }
+#sidebar div.wid-a .wid-b { background:url(images/widget_bg_repeat.png) repeat-y 0 0; padding:8px 29px 6px 35px; overflow:hidden; }
+#text-443879041 .wid-b { padding: 8px 14px 6px 23px !important; }
+.widget_search label { display:none; }
+#sidebar li#search { padding-bottom:16px !important; }
+#text-234927691 .wid-b { padding: 8px 10px 6px 30px !important; }
+.narrowcolumn h3#comments, .narrowcolumn ol.commentlist { margin:0 7px; }
+
+#footer a{ color:#2acfdc; border-bottom:1px dotted #ccc;}
+.foot-left{ float:left}
+.foot-right{ float:right;}
+#footer *{ font-size:11px; color:#aac7ca; text-shadow:1px 1px 0px #052325;}
