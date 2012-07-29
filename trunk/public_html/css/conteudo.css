@@ -41,9 +41,9 @@ body {
 
 #conteudoLeft{
     /*width: 60%;*/
-    width:98%;
-    /*border-right: 0.5px dotted;*/
-    padding: 6px;
+    width:100%;
+    /*border-right: 0.5px dotted;
+    padding: 6px;*/
 }
 
 #conteudoRight{

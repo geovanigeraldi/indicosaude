@@ -15,12 +15,18 @@ class ContatoController extends Zend_Controller_Action
     
 	public function pessoalAction()
     {
+        $this->view->msg = "";
         $tipoPlano = new Application_Model_TipoPlano_TipoPlanoMapper();
     	$this->view->objTipoPlano = $tipoPlano->fetchAll();
-    	
+        $request = $this->getRequest();
+
+        if($request->getParam('msg') == 1)
+        {
+            $this->view->msg = "O corretor não está disponível no momento. Entre em contato através do formulário abaixo ou dos número ao lado.";
+        }
+
     	//=================================================================
     	//verifica o post da pagina, para inclusao dos planos
-        $request = $this->getRequest();
         if( $request->getPost() ){
         	self::cadastrarPessoaContato($request->getPost());
 	       	$this->_redirect("/");
