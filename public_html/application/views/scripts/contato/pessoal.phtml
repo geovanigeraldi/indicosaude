@@ -23,7 +23,10 @@ jQuery(document).ready(function(){
 </script>
 <h2>Formulário de contato</h2>
 <form class="form" id="frmPessoais" method="POST" action="<?= $this->actionForm ?>">
-	<br>
+    <br>
+    <div class="grid-12-12">
+        <h5 style="color:red;"><?php echo (!empty($this->msg)) ? $this->msg : ""; ?></h5>
+    </div>
     <fieldset style="border: 1px solid #cacaca;">
         <legend><h4>Dados Pessoais</h4></legend>
         <div class="grid-8-12">

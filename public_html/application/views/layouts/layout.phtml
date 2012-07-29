@@ -74,7 +74,7 @@
         	var temp = navigator.appVersion.split("MSIE");
         	var versao = parseFloat(temp[1]);
         	if(versao == 9){
-        		alert("Voc"+String.fromCharCode(136)+" est"+String.fromCharCode(225)+" usando a vers"+String.fromCharCode(198)+"o " + versao + " do Internet Explorer.\n\nPara melhor visualizar o site, use o modo de compatibilidade.");
+        		alert("Voc"+String.fromCharCode(136)+" est"+String.fromCharCode(225)+" usando o Internet Explorer " + versao + ".\n\nPara uma melhor navegação utilize o Firefox ou Chrome.");
             }
         }
 
@@ -162,21 +162,21 @@
                 -->
         </div>
         <div id="menu-primary" class="menu-container">
-			<div class="menu" style="padding-left:12%;">
-				<ul id="menu-primary-items" class="sf-js-enabled" style="width:990px;">
-					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a target="_blank" href="http://blog.indicosaude.local">Blog</a></li>
-					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/">Home</a></li>
-					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/contato/pessoal">Contatos</a></li>
-					<?php if ($this->valid) {?>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/operadora">Operadora</a></li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/categoriaplano">Categoria Plano</a></li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/cadastroplanos">Planos de saúde</a></li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/alterar/alterarplanos">Alterar plano</a></li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/conteudo/listapessoacontato">Lista Contatos</a></li>
-					<?php } ?>
-				</ul>
-			</div>
-		</div>
+                <div class="menu" style="padding-left:12%;">
+                        <ul id="menu-primary-items" class="sf-js-enabled" style="width:990px;">
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a target="_blank" href="http://blog.indicosaude.local">Blog</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/">Home</a></li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/contato/pessoal">Contatos</a></li>
+                                <?php if ($this->valid) {?>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/operadora">Operadora</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/categoriaplano">Categoria Plano</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/cadastroplanos">Planos de saúde</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/alterar/alterarplanos">Alterar plano</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/conteudo/listapessoacontato">Lista Contatos</a></li>
+                                <?php } ?>
+                        </ul>
+                </div>
+        </div>
         <!-- end top -->
         <div class="slider_container">
             <div class="slider_shadow_top"></div>
@@ -189,21 +189,23 @@
                     <img src="/img/slides/7.jpg" alt="" title="Unimed Centro-Oeste e Tocantins" width="950" height="276"/> 
                 </div>
             </div>
-            <div class="slider_shadow_bottom"></div>
+            
         </div>
         <div id="container">
-        	<div style="width:75%; float:left;">
-            	<?php echo $this->layout()->content ?>
+            <div style="width:75%; float:left;clear:rigth;">
+            	<?php echo $this->layout()->content; ?>
             </div>
-            <div class="news"  style="width:23%;">
+            <div class="news" style="width:23%;">
                     <div class="news_head">
                         <h2>CONTATOS</h2>
                     </div>
                     <div class="newsslider">
                         <div class="newsslidercontent" id="newsslider">
-                        	<div style="width: 99%;clear: right;">
-                        		<div><h3>PLANTÃO DE VENDAS <br> 4103-0261</h3></div>
-                        	</div>
+                            <div>
+                                <div>
+                                    <h3>PLANTÃO DE VENDAS <br> 4103-0261</h3>
+                                </div>
+                            </div>
                             <div id="newssection-1" class="newssection upper">
                                 <div class="news_date">ESCRITÓRIO<br /></div>
                                 <div class="news_text">(61)3223-2925</div>
@@ -221,14 +223,20 @@
                                 <div class="news_text">(61)9824-0601</div>
                                 
                                 <div class="news_date">
-                                	<br />
-                                	<a href="mailto:contato@indicosaude.com.br">contato@indicosaude.com.br</a>
+                                    <br />
+                                    <a href="mailto:contato@indicosaude.com.br">contato@indicosaude.com.br</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                    	<img alt="Plano dental" src="/img/dental.png">
+                        <a href="#" onclick="window.open('./online/chat.php?code=U0VSVkVSUEFHRQ__','','width=590,height=725,left=0,top=0,resizable=yes,menubar=no,location=yes,status=yes,scrollbars=yes')">
+                            <img alt="Atendimento online" src="./online/banner/livezilla_03_0.jpg">
+                        </a>
+                    </div>
+                    <div>
+                        <br/>
+                        <img alt="Plano dental" src="/img/prodent.jpg">
                     </div>
                 </div>
         <!-- end container -->
