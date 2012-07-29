@@ -18,8 +18,8 @@ jQuery('#frmPlanosSaude').ready(function(){
 </script>
 <h1>Plano de Saúde</h1>
 <form class="form" id="frmPlanosSaude" method="POST" action="<?= $this->actionForm ?>">
-	<img src="../../../../img/img_logo/<?php echo $this->idPlano; ?>.jpg" width="150px" height="75px;"/>
-    <fieldset>
+    <img src="../../../../img/img_logo/<?php echo $this->idPlano; ?>.jpg" width="150px" height="75px;"/>
+    <fieldset style="border: 1px solid #cacaca;">
         <legend>Dados do plano de saude</legend>
         <div class="grid-5-12">
             <label class="form-lbl">Tipo do plano:</label>
@@ -34,5 +34,5 @@ jQuery('#frmPlanosSaude').ready(function(){
         </div>
         <div id="categoriaPlano" class="grid-4-12"></div>
         <div id="detalhe" class="grid-12-12"></div>
-	</fieldset>
+    </fieldset>
 </form>    
