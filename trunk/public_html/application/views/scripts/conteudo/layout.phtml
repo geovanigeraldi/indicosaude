@@ -1,34 +1,7 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-<!-- Google Website Optimizer Control Script -->
-<script>
-	function utmx_section(){}function utmx(){}
-	(function(){var k='1436381533',d=document,l=d.location,c=d.cookie;function f(n){
-	if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.
-	length+1,j<0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;
-	d.write('<sc'+'ript src="'+
-	'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com'
-	+'/siteopt.js?v=1&utmxkey='+k+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='
-	+new Date().valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-	'" type="text/javascript" charset="utf-8"></sc'+'ript>')})();
-</script>
-<script>utmx("url",'A/B');</script>
-<!-- End of Google Website Optimizer Control Script -->
-<!-- Google Website Optimizer Tracking Script -->
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['gwo._setAccount', 'UA-30856504-2']);
-	_gaq.push(['gwo._trackPageview', '/1436381533/test']);
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
-</script>
-<!-- End of Google Website Optimizer Tracking Script -->
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>4103-0261 :: INDICO SAÚDE</title>
 
     <link href="/css/reset.css" rel="stylesheet" type="text/css" />
@@ -67,17 +40,20 @@
 
         jQuery.noConflict();
         jQuery('.slider').corner("8px");
-
-
+	</script>
+    
+    <script type="text/javascript">
     	//verifica se o IE é o 9, e solicita para habiliat o modo de compatibilidade
         if(navigator.appVersion.indexOf("MSIE")!= -1){
         	var temp = navigator.appVersion.split("MSIE");
         	var versao = parseFloat(temp[1]);
         	if(versao == 9){
-        		alert("Voc"+String.fromCharCode(136)+" est"+String.fromCharCode(225)+" usando o Internet Explorer " + versao + ".\n\nPara uma melhor navegação utilize o Firefox ou Chrome.");
+        		alert("Voc"+String.fromCharCode(136)+" est"+String.fromCharCode(225)+" usando a vers"+String.fromCharCode(198)+"o " + versao + " do Internet Explorer.\n\nPara melhor visualizar o site, use o modo de compatibilidade.");
             }
         }
-
+    </script>
+    
+    <script type="text/javascript">
     	//dados google analytics    
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-30856504-1']);
@@ -146,54 +122,67 @@
         <div id="top">
             <div id="logo"></div>
             <br style="clear:both" />		
+                <!-- REMOVIDO O CAMPO SEARCH
+                <div class="searchform">
+                    <form method="get" action="">
+                        <fieldset>
+                            <input type="text" name="s" class="searchfield" value="Start Searching..." onfocus="if(this.value=='Start Searching...') this.value=''" onblur="if(this.value=='') this.value='Start Searching...'" />
+                            <input type="image" src="img/searchbutton.png" class="lens" />
+                        </fieldset>
+                    </form>
+                </div>
+                -->
+            <!-- end searchform -->
+                <!--  REMOVIDO DA REDES-SOCIAIS
+                <div class="socialicons"><p><a href="#"><img src="img/social_icons/1.png" alt="" class="social_icon" /></a> <a href="#"><img src="img/social_icons/2.png" alt="" class="social_icon" /></a> <a href="#"><img src="img/social_icons/3.png" alt="" class="social_icon" /></a> <a href="#"><img src="img/social_icons/4.png" alt="" class="social_icon" /></a> <a href="#"><img src="img/social_icons/5.png" alt="" class="social_icon" /></a> <a href="#"><img src="img/social_icons/6.png" alt="" class="social_icon" /></a></p></div>
+                -->
         </div>
         <div id="menu-primary" class="menu-container">
-                <div class="menu" style="padding-left:12%;">
-                        <ul id="menu-primary-items" class="sf-js-enabled" style="width:990px;">
-                                <!-- li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a target="_blank" href="http://blog.indicosaude.com.br">Blog</a></li -->
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/">Home</a></li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/contato/pessoal">Contatos</a></li>
-                                <?php if ($this->valid) {?>
-                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/operadora">Operadora</a></li>
-                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/categoriaplano">Categoria Plano</a></li>
-                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/cadastroplanos">Planos de saúde</a></li>
-                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/alterar/alterarplanos">Alterar plano</a></li>
-                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/conteudo/listapessoacontato">Lista Contatos</a></li>
-                                <?php } ?>
-                        </ul>
-                </div>
-        </div>
+			<div class="menu" style="padding-left:12%;">
+				<ul id="menu-primary-items" class="sf-js-enabled">
+					<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a target="_blank" href="http://blog.indicosaude.local">Blog</a></li> -->
+					<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-21"><a href="/">Home</a></li>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="/contato/pessoal">Contatos</a></li>
+					<?php if ($this->valid) {?>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/operadora">Operadora</a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/categoriaplano">Categoria Plano</a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/cadastro/cadastroplanos">Planos de saúde</a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/alterar/alterarplanos">Alterar plano</a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20"><a href="<?php echo $this->baseUrl() ?>/conteudo/listapessoacontato">Lista Contatos</a></li>
+					<?php } ?>
+				</ul>
+			</div>
+		</div>
         <!-- end top -->
         <div class="slider_container">
             <div class="slider_shadow_top"></div>
             <div class="slider">
                 <div id="slider">
                     <img src="/img/slides/1.jpg" alt="" title="Bradesco Saúde" width="950" height="276"/> 
-                    <!-- img src="/img/slides/2.jpg" alt="" title="Golden Cross" width="950" height="276"/ -->
+                    <img src="/img/slides/2.jpg" alt="" title="Golden Cross" width="950" height="276"/>
                     <img src="/img/slides/amil.jpg" alt="" title="AMIL" width="950" height="276"/>
-                    <!-- img src="/img/slides/7.jpg" alt="" title="Unimed Centro-Oeste e Tocantins" width="950" height="276"/ --> 
+                    <img src="/img/slides/6.png" alt="" title="Intermédica" width="950" height="276"/>
+                    <img src="/img/slides/7.png" alt="" title="Unimed Centro-Oeste e Tocantins" width="950" height="276"/> 
                 </div>
             </div>
-            
+            <div class="slider_shadow_bottom"></div>
         </div>
         <div id="container">
-            <div style="width:75%; float:left;clear:rigth;">
-            	<?php echo $this->layout()->content; ?>
+        	<div style="width:75%; float:left;">
+            	<?php echo $this->layout()->content ?>
             </div>
-            <div class="news" style="width:23%;">
+            <div class="news">
                     <div class="news_head">
                         <h2>CONTATOS</h2>
                     </div>
                     <div class="newsslider">
                         <div class="newsslidercontent" id="newsslider">
-                            <div>
-                                <div>
-                                    <h3>PLANTÃO DE VENDAS <br> 4103-0261</h3>
-                                </div>
-                            </div>
+                        	<div style="width: 99%;clear: right;">
+                        		<div><h3>PLANTÃO DE VENDAS <br> 4103-0261</h3></div>
+                        	</div>
                             <div id="newssection-1" class="newssection upper">
-                                <!-- div class="news_date">ESCRITÓRIO<br /></div>
-                                <div class="news_text">(61)3223-2925</div -->
+                                <div class="news_date">ESCRITÓRIO<br /></div>
+                                <div class="news_text">(61)3223-2925</div>
                                 
                                 <div class="news_date">CLARO<br /></div>
                                 <div class="news_text">(61)9304-3648</div>
@@ -208,21 +197,11 @@
                                 <div class="news_text">(61)9824-0601</div>
                                 
                                 <div class="news_date">
-                                    <br />
-                                    <a href="mailto:contato@indicosaude.com.br">contato@indicosaude.com.br</a>
+                                	<br />
+                                	<a href="mailto:contato@indicosaude.com.br">contato@indicosaude.com.br</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <a href="#" onclick="window.open('http://indicosaude.com.br/online/chat.php?code=U0VSVkVSUEFHRQ__','','width=590,height=725,left=0,top=0,resizable=yes,menubar=no,location=yes,status=yes,scrollbars=yes')">
-                            <img alt="Atendimento online" src="http://indicosaude.com.br/online/banner/livezilla_03_0.jpg">
-                        </a>
-                    </div>
-                    <div>
-			   <br/>
-			   <h4>A partir de R$ 19,80 (Servidor p&uacute;blico)</h4>
-                        <img alt="Plano dental" src="/img/prodent.jpg">
                     </div>
                 </div>
         <!-- end container -->

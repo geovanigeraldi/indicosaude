@@ -1,9 +1,11 @@
 <?php
-class Application_Model_TipoCategoriaPlanoFaixaEtaria_TipoCategoriaPlanoFaixaEtaria
+class Application_Model_Usuario_Usuario
 {
-    protected $_id_tipo_categoria_plano_faixa_etaria;
-    protected $_id_tipo_categoria_plano;
-    protected $_id_faixa_etaria;
+    protected $_id_user;
+    protected $_no_user;
+    protected $_ds_login;
+    protected $_ds_pass;
+    protected $_fl_perfil;
 
     public function __construct(array $options = null)
     {
@@ -41,37 +43,61 @@ class Application_Model_TipoCategoriaPlanoFaixaEtaria_TipoCategoriaPlanoFaixaEta
         }
         return $this;
     }
-
-    public function setIdTipoCategoriaPlanoFaixaEtaria($id)
+    
+	public function setIdUser($id)
     {
-        $this->_id_tipo_categoria_plano_faixa_etaria = (int) $id;
+        $this->_id_user = (int) $id;
         return $this;
     }
 
-    public function getIdTipoCategoriaPlanoFaixaEtaria()
+    public function getIdUser()
     {
-        return $this->_id_tipo_categoria_plano_faixa_etaria;
+        return $this->_id_user;
     }
-
-    public function setIdTipoCategoriaPlano($id)
+    
+	public function setNoUser($no)
     {
-        $this->_id_tipo_categoria_plano = (int) $id;
+        $this->_no_user = (string) $no;
         return $this;
     }
 
-    public function getIdTipoCategoriaPlano()
+    public function getNoUser()
     {
-        return $this->_id_tipo_categoria_plano;
+        return $this->_no_user;
     }
-
-    public function setIdFaixaEtaria($id)
+    
+	public function setDsLogin($ds)
     {
-        $this->_id_faixa_etaria = (int) $id;
+        $this->_ds_login = (string) $ds;
         return $this;
     }
 
-    public function getIdFaixaEtaria()
+    public function getDsLogin()
     {
-        return $this->_id_faixa_etaria;
+        return $this->_ds_login;
+    }
+    
+	public function setDsPass($ds)
+    {
+        $this->_ds_pass = (string) $ds;
+        return $this;
+    }
+
+    public function getDsPass()
+    {
+        return $this->_ds_pass;
+    }
+    
+	public function setFlPerfil($id)
+    {
+        $this->_fl_perfil = (int) $id;
+        return $this;
+    }
+
+    public function getFlPerfil()
+    {
+        return $this->_fl_perfil;
     }
 }
+
+?>

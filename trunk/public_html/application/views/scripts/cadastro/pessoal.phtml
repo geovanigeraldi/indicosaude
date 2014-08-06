@@ -1,15 +1,16 @@
 <script>
-jQuery(document).ready(function(){
+    $(document).ready(function(){
+        //$("input:text").setMask();
 
-		jQuery("#idTipoPlano").change(function(){
-			carregaPagina('<?= $this->baseUrl() ?>/conteudo/operadora/','plano',jQuery('#idTipoPlano').val());
+	    $("#idTipoPlano").change(function(){
+	    	Funcoes.carregaCategoriaPlano('<?= $this->baseUrl() ?>/conteudo/operadora/','plano',$('#idTipoPlano').val());
 	    });
 
-		jQuery("#frmPessoais").validate({
+		$("#frmPessoais").validate({
 			rules:{
-				nuTelefone:{required: function(){if(jQuery('#nuCelular').val() == "" && jQuery('#dsEmail').val() == ""){return true;}else{return false;}}},
-				nuCelular:{required: function(){if(jQuery('#nuTelefone').val() == "" && jQuery('#dsEmail').val() == ""){return true;}else{return false;}}},
-				dsEmail:{required: function(){if(jQuery('#nuTelefone').val() == "" && jQuery('#nuCelular').val() == ""){return true;}else{return false;}}}
+				nuTelefone:{required: function(){if($('#nuCelular').val() == "" && $('#dsEmail').val() == ""){return true;}else{return false;}}},
+				nuCelular:{required: function(){if($('#nuTelefone').val() == "" && $('#dsEmail').val() == ""){return true;}else{return false;}}},
+				dsEmail:{required: function(){if($('#nuTelefone').val() == "" && $('#nuCelular').val() == ""){return true;}else{return false;}}}
 			}
 			,
 			messages:{
@@ -17,17 +18,28 @@ jQuery(document).ready(function(){
 				nuCelular:"Celular ou",
 				dsEmail:"Email"
 			}
+			,
+			submitHandler: function(form) {
+				var ok = true;
+				/*if($('#nuTelefone').val() == "" && $('#nuCelular').val() == "" && $('#dsEmail').val() == ""){
+					ok = false;
+					$("#msgErro").text("Informe pelo menos um meio de contato.");
+					$("#msgErro").show();
+				}*/
+
+				if(ok){
+					jQuery("html").showLoading();
+					//form.submit();
+				}
+			}
 		});
 		
     });
 </script>
 <h2>Formulário de contato</h2>
 <form class="form" id="frmPessoais" method="POST" action="<?= $this->actionForm ?>">
-    <br>
-    <div class="grid-12-12">
-        <h5 style="color:red;"><?php echo (!empty($this->msg)) ? $this->msg : ""; ?></h5>
-    </div>
-    <fieldset style="border: 1px solid #cacaca;">
+	<br>
+    <fieldset>
         <legend><h4>Dados Pessoais</h4></legend>
         <div class="grid-8-12">
             <label class="form-lbl">Nome:</label>
@@ -42,15 +54,15 @@ jQuery(document).ready(function(){
         </div>
 	</fieldset>
 	<br>
-    <fieldset style="border: 1px solid #cacaca;">
+    <fieldset>
         <legend><h4>Contatos</h4></legend>
         <div class="grid-4-12">
             <label class="form-lbl">Telefone:</label>
-            <input class="form-txt" id="nuTelefone" name="nuTelefone" alt="9999-9999" size="15" maxlength="13" value=""/>
+            <input class="form-txt" id="nuTelefone" name="nuTelefone" alt="(99)9999-9999" size="15" value=""/>
         </div>
         <div class="grid-4-12">
             <label class="form-lbl">Celular:</label>
-            <input class="form-txt" id="nuCelular" name="nuCelular" alt="9999-9999" size="15" maxlength="13" value=""/>
+            <input class="form-txt" id="nuCelular" name="nuCelular" alt="(99)9999-9999" size="15" value=""/>
         </div>
         <div class="grid-4-12"></div>
         <div class="grid-6-12">
@@ -64,7 +76,7 @@ jQuery(document).ready(function(){
         </div>
     </fieldset>
     <br>
-    <fieldset style="border: 1px solid #cacaca;">
+    <fieldset>
         <legend><h4>Informação / Sugestão</h4></legend>
         <div class="grid-12-12">
         	<textarea id="dsContato" class="required" name="dsContato" rows="10" cols="50" maxlength="400"></textarea>

@@ -187,6 +187,7 @@ class Application_Model_CategoriaPlano_CategoriaPlanoMapper {
 		    	->from(array('cp' => 'tb_categoria_plano'))
 		    	->join(array('op' => 'tb_operadora'),'op.id_operadora = cp.id_operadora')
 		    	->where('op.id_operadora = ? ',$id)
+                        ->where('op.fl_ativo = ? ',1)
 		    	->group(array('cp.no_categoria_plano'));
 		    	
 		$select->setIntegrityCheck(false);

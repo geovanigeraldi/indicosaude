@@ -90,29 +90,36 @@ class Application_Model_Usuario_UsuarioMapper
     
     public function login(Application_Model_Usuario_Usuario $usuario)
     {
-    	$tbUsuario = new Application_Model_DbTable_TbUsuario();
-        	
-        $auth = Zend_Auth::getInstance();
-        $authAdapter = new Zend_Auth_Adapter_DbTable($tbUsuario->getAdapter(),'indicosa_dbindicosaude.tb_usuario');
-        
-        $authAdapter->setIdentityColumn("ds_login")
-        			->setCredentialColumn("ds_pass");
-        
-        $authAdapter->setIdentity($usuario->getDsLogin())
-        			->setCredential($usuario->getDsPass());
-        
-        $result = $auth->authenticate($authAdapter);
+    	$select = $this->getDbTable() 
+    			->select()
+		    	->from(array('us' => 'tb_usuario'))
+		    	->where('us.ds_login = ? ', $usuario->getDsLogin())
+		    	->where('us.ds_pass = ? ', $usuario->getDsPass());
+		    	
+		$select->setIntegrityCheck(false);
+//echo $select;exit;
 
-		if($result->isValid())
+    	$resultSet = $this->getDbTable()->fetchAll($select);
+		
+		$arrResult   = array();
+        foreach ($resultSet as $row) {
+        	$arrUsuario = new Application_Model_Usuario_Usuario();
+        	$arrUsuario->setIdUser($row->id_user);
+            $arrUsuario->setNoUser($row->no_user);
+            $arrUsuario->setFlPerfil($row->fl_perfil);
+            $arrResult[] = $arrUsuario;
+        }
+
+//echo'<pre>';print_r($arrResult);exit;        
+		if(!empty($arrResult))
 		{
-			$arrResult = $authAdapter->getResultRowObject();
-			$retorno = new Zend_Auth_Result(Zend_Auth_Result::SUCCESS, array());
+			$result = new Zend_Auth_Result(Zend_Auth_Result::SUCCESS, array($arrResult));
 		}
 		else 
 		{
-			$retorno = new Zend_Auth_Result(Zend_Auth_Result::FAILURE, array());
+			$result = new Zend_Auth_Result(Zend_Auth_Result::FAILURE, array());
 		}
 		
-		return $retorno;
+		return $result;
     }
 }
