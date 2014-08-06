@@ -27,11 +27,11 @@ jQuery('#frmPlanosSaude').ready(function(){
 	foreach( $this->objDescCategoria as $value ): ?>
 		<div class="grid-12-12">
 			<label class="form-lbl">Descri&ccedil;&atilde;o do plano:</label>
-			<textarea class="form-txt" id="dsCategoriaPlano" name="dsCategoriaPlano" maxlength="200" style="width: 99%;" rows="10"><?= $value->getDsCategoriaPlano() ?></textarea>
+			<textarea class="form-txt" id="dsCategoriaPlano" name="dsCategoriaPlano" maxlength="200" style="width: 99%;" rows="6"><?= $value->getDsCategoriaPlano() ?></textarea>
 		</div>
 		<div class="grid-12-12">
 			<label class="form-lbl">Rede credenciada:</label>
-			<textarea class="form-txt" id="dsRedeCredenciada" name="dsRedeCredenciada" maxlength="400" style="width: 99%;" rows="20"><?= $value->getDsRedeCredenciada() ?></textarea>
+			<textarea class="form-txt" id="dsRedeCredenciada" name="dsRedeCredenciada" maxlength="400" style="width: 99%;" rows="10"><?= $value->getDsRedeCredenciada() ?></textarea>
 		</div>
 	<?php endforeach; 
 endif; ?>

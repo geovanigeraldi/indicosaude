@@ -4,6 +4,7 @@ class Application_Model_Operadora_Operadora
     protected $_id_operadora;
     protected $_no_operadora;
     protected $_ds_operadora;
+    protected $_fl_ativo;
 
     public function __construct(array $options = null)
     {
@@ -73,5 +74,16 @@ class Application_Model_Operadora_Operadora
     public function getDsOperadora()
     {
         return $this->_ds_operadora;
+    }
+    
+    public function setFlAtivo($fl)
+    {
+        $this->_fl_ativo = (bool) $fl;
+        return $this;
+    }
+
+    public function getFlAtivo()
+    {
+        return $this->_fl_ativo;
     }
 }

@@ -60,7 +60,7 @@ class Application_Model_Operadora_OperadoraMapper {
 
     public function fetchAll()
     {
-        $select = $this->getDbTable()->select();
+        $select = $this->getDbTable()->select()->where('fl_ativo = ? ',1);
 
         $resultSet = $this->getDbTable()->fetchAll($select);
 
@@ -103,6 +103,7 @@ class Application_Model_Operadora_OperadoraMapper {
 		    	->join(array('op' => 'tb_operadora'), 
 		    				'op.id_operadora = cp.id_operadora')
 		    	->where('tp.id_tipo_plano = ? ',$id)
+                        ->where('op.fl_ativo = ? ',1)
 		    	->group(array('op.no_operadora'));
 		    	
 		$select->setIntegrityCheck(false);
